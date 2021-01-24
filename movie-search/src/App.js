@@ -1,4 +1,3 @@
-import SeachMovie from './components/MovieSearch';
 import './style/App.css';
 import MovieSeach from './components/MovieSearch'
 
