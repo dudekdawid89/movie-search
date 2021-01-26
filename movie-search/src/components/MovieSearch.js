@@ -8,7 +8,6 @@ export default function MovieSearch(){
     const [movies, setMovies] = useState([])
    
     async function SearchMovie(e){
-       
         e.preventDefault()
 
         const url = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_API}&language=en-US&query=${query}&page=1&include_adult=false`;
@@ -17,9 +16,7 @@ export default function MovieSearch(){
         const data = await response.json()
         setMovies(data.results)
         console.log(movies)
-
     }
-
 
     return(
         <>
@@ -34,9 +31,11 @@ export default function MovieSearch(){
                 />
                 <button className="button" type="submit">Search Movie</button>
             </form>
+            <div className="movieContainer">    
             {movies.filter(movie => movie.poster_path).map(movie => (
                 <MovieCard movie={movie} />
             ))}
+            </div>
         </>
     )
 }

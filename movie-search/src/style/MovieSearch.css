@@ -1,2 +1,21 @@
+.movieContainer{
+    display: flex;
+    width: 60%;
+    flex-wrap: wrap;
+    background-color: red;
+    justify-content: center;
+    margin: 2em auto;
+    
+}
 
+.card{
+    margin: 1em;
+    background-color: red;
+    width: 250px;
+    height: 100%;
+    
+}
 
+img{
+    width: 100%;
+}
